@@ -1,6 +1,8 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css" />
+	<title>VASEr - getting started</title>
+	<script src='back.js'></script>
 </head>
 <body>
 	<div class='vaser_wrap'>
@@ -25,7 +27,7 @@
 <tr><td>composition</td></tr>
 </table>
 
-<p>VASEr merely takes care the primitives generation part (redlighted). Call <code>renderer::before()</code> and <code>renderer::after()</code> before and after rendering. VASEr API is namespaced <code>VASEr</code>.
+<p>VASEr is not a render engine, but merely takes care the primitives generation part (redlighted). Call <code>renderer::before()</code> and <code>renderer::after()</code> before and after rendering. VASEr API is namespaced <code>VASEr</code>.
 </p>
 
 <div class='box_tips'>
@@ -92,35 +94,7 @@ namespace VASEr
 } </pre>
 <p>then <code>#include "vaser.h"</code>. There is only one file to compile, <code>vaser.cpp</code>. It is a unity build; no make file, no hassle. Alternatively, <code>#include "vaser.cpp"</code> just works, because implementation is namespaced in <code>VASErin</code> to prevent collision.</p>
 <p>defining a Vec2 with <code>float</code> precision may work but may lead to undesirable precision lost, because internally VASEr use <code>double</code> for floating point operations.</p>
-<script>
-/*
-(function()
-{	//init
-	var tips_list = document.getElementsByClassName('box_tips');
-	for ( var i=0; i<tips_list.length; i++)
-	{
-		var a_list = tips_list[i].getElementsByTagName('a');
-		if ( a_list.length > 0)
-		{
-			var instr = a_list[0].innerHTML;
-			if ( instr.length==4)
-				if ( instr=='hide')
-					box_tips_switchsize( a_list[0]);
-		}
-	}
-}());*/
-function box_tips_switchsize(obj)
-{
-	if ( obj.innerHTML=='show')
-	{	//show the box tips
-		obj.parentNode.style.height='auto';
-		obj.innerHTML='hide';
-	}
-	else
-	{	//hide it
-		obj.parentNode.style.height='140px';
-		obj.innerHTML='show';
-	}
-}
-</script>
+
+<div style='height:100px;'></div><div id="disqus_thread"></div><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
 </body>
